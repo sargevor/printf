@@ -11,3 +11,10 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_signed(long long nbr)
+{
+	if (nbr < 0)
+		return (ft_putchar('-') + ft_putnbr_base(-nbr, "0123456789", 10));
+	return (ft_putnbr_base(nbr, "0123456789", 10));
+}
