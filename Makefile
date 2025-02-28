@@ -6,7 +6,7 @@
 #    By: sargevor <sargevor@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/12 18:03:43 by sargevor          #+#    #+#              #
-#    Updated: 2025/02/16 14:10:31 by sargevor         ###   ########.fr        #
+#    Updated: 2025/02/18 22:32:39 by sargevor         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,10 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar -rcs
 
 
-HEADER = printf.h
+HEADER = ft_printf.h
 
-MANDATORY = 
+MANDATORY = ft_check.c ft_choose.c ft_printf.c ft_putchar.c ft_putnbr_base.c \
+			ft_putptr.c ft_putstr.c ft_signed.c
 
 OBJS = $(MANDATORY:.c=.o)
 
@@ -38,4 +39,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
